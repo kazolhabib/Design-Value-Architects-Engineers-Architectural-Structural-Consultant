@@ -20,7 +20,7 @@ export default function HeaderHome() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-40 py-4 transition-all duration-400 ${
+      className={`fixed top-0 left-0 right-0 z-40 py-8 transition-all duration-400 ${
         scrolled
           ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100"
           : "bg-transparent"
@@ -53,11 +53,13 @@ export default function HeaderHome() {
             +88-02-223329893
           </a>
 
-          {/* Contact Us Button (Pill shaped solid black) */}
-          <Link href="/contact-us">
-            <button className="bg-black hover:bg-primary text-white font-bold rounded-full py-2.5 px-6 md:px-8 text-[0.8125rem] md:text-[0.875rem] tracking-wider uppercase transition-all duration-300 transform hover:scale-105 cursor-pointer">
-              CONTACT US
-            </button>
+          {/* Contact Us Button (Pill shaped solid black with cropping hover effect) */}
+          <Link
+            id="contact-us-button"
+            href="/contact-us"
+            className="btn-hover-cropping bg-black text-white font-bold rounded-full py-2.5 px-6 md:px-8 text-[0.8125rem] md:text-[0.875rem] tracking-wider uppercase border border-black cursor-pointer inline-flex items-center justify-center"
+          >
+            <span className="relative z-10">CONTACT US</span>
           </Link>
 
           {/* Hamburger Menu Trigger */}
