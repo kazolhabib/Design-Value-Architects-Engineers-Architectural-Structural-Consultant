@@ -42,17 +42,17 @@ export default function Home() {
             </Reveal>
           </div>
 
-          {/* Project Grid — offset layout */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10 items-end">
-            {/* Left: Ashulia Complex (larger) */}
-            <Reveal duration={0.9} delay={0.1} y={40}>
+          {/* Project Grid — exact layout matching screenshot */}
+          <div className="grid grid-cols-12 gap-y-12 md:gap-y-0 gap-x-6 lg:gap-x-10 items-start">
+            {/* Left: Ashulia Complex (larger, taking 7 columns) */}
+            <Reveal duration={0.9} delay={0.1} y={40} className="col-span-12 md:col-span-7">
               <div className="group">
                 <div className="relative w-full aspect-[4/3.2] overflow-hidden bg-gray-100">
                   <Image
                     src="/assets/uploads/2025/07/3a-copy-scaled.jpg"
                     alt="Ashulia Complex"
                     fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
+                    sizes="(max-width: 768px) 100vw, 58vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                 </div>
@@ -67,15 +67,15 @@ export default function Home() {
               </div>
             </Reveal>
 
-            {/* Right: Miladri (portrait, offset down) */}
-            <Reveal duration={0.9} delay={0.3} y={50}>
-              <div className="group md:mt-16 lg:mt-24">
+            {/* Right: Miladri (portrait, taking 4 columns, starting at column 9, aligned top) */}
+            <Reveal duration={0.9} delay={0.3} y={50} className="col-span-12 md:col-span-4 md:col-start-9">
+              <div className="group">
                 <div className="relative w-full aspect-[3/4] overflow-hidden bg-gray-100">
                   <Image
                     src="/assets/uploads/2025/07/milari.png"
                     alt="Miladri"
                     fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
+                    sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                 </div>
