@@ -1,26 +1,60 @@
 @import "tailwindcss";
+@import "@heroui/styles";
+
+/* Tailwind CSS v4 configuration */
+@theme {
+  --color-primary: #FC5A11;
+  --color-secondary: #2c2c2c;
+  --color-black-deep: #000000;
+  --color-black-2: #072032;
+  --color-black-3: #212125;
+  --color-black-4: #262629;
+  
+  --color-white-2: #F9F9F9;
+  --color-white-3: #F3F3F3;
+  --color-gray-dark: #666666;
+  --color-gray-light: #ECECF4;
+  
+  --font-sans: var(--font-euclid-circular-b), sans-serif;
+  --font-display: var(--font-space-grotesk), sans-serif;
+  --font-heading: var(--font-space-grotesk), sans-serif;
+}
+
+/* Source HeroUI component theme classes for Tailwind CSS v4 scanning */
+@source "../node_modules/@heroui/theme/dist";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #FFFFFF;
+  --foreground: #2c2c2c;
+  
+  --primary-color: #FC5A11;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-euclid-circular-b), sans-serif;
+}
+
+/* Custom 1720px Container represented entirely in rem */
+.container-custom {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem; /* 24px responsive edge padding */
+  padding-right: 1.5rem;
+  max-width: 107.5rem; /* 1720px / 16px base */
+}
+
+/* Custom helper classes entirely using rem */
+.section-padding {
+  padding-top: 5rem;    /* 80px */
+  padding-bottom: 5rem; /* 80px */
+}
+
+@media (min-width: 48rem) { /* 768px */
+  .section-padding {
+    padding-top: 7.5rem;    /* 120px */
+    padding-bottom: 7.5rem; /* 120px */
+  }
 }
