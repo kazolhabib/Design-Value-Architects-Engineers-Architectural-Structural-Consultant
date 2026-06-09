@@ -3,9 +3,20 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { useState, useEffect } from "react";
 
 export default function HeaderInternal() {
   const pathname = usePathname();
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll(); // check on mount
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navLinks = [
     { name: "HOME", path: "/" },
@@ -16,7 +27,13 @@ export default function HeaderInternal() {
   ];
 
   return (
-    <header className="bg-white border-b border-gray-100 py-5 sticky top-0 z-40 shadow-sm transition-all duration-300">
+    <header
+      className={`fixed top-0 left-0 right-0 z-40 py-5 transition-all duration-400 ${
+        scrolled
+          ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100"
+          : "bg-transparent"
+      }`}
+    >
       <div className="container-custom flex justify-between items-center">
         {/* Left: Logo */}
         <Link href="/" className="flex items-center">
