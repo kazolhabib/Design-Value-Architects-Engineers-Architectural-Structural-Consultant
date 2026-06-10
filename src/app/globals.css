@@ -3,7 +3,7 @@
 
 /* Tailwind CSS v4 configuration */
 @theme {
-  --color-primary: #FC5A11;
+  --color-primary: #000000;
   --color-secondary: #2c2c2c;
   --color-black-deep: #000000;
   --color-black-2: #072032;
@@ -27,7 +27,7 @@
   --background: #FFFFFF;
   --foreground: #2c2c2c;
   
-  --primary-color: #FC5A11;
+  --primary-color: #000000;
 }
 
 body {
@@ -77,7 +77,7 @@ body {
   top: 50%;
   width: 155%;
   height: 0%;
-  background-color: var(--color-primary, #FC5A11);
+  background-color: #ffffff; /* White background slides in */
   transform: translate(-50%, -50%) rotate(25deg);
   transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
   z-index: -1; /* Renders above parent background but below text in the local stacking context */
@@ -86,8 +86,8 @@ body {
 }
 
 .btn-hover-cropping:hover {
-  color: #ffffff !important;
-  border-color: var(--color-primary, #FC5A11) !important;
+  color: #000000 !important; /* Text becomes black */
+  border-color: #000000 !important; /* Border stays black */
 }
 
 .btn-hover-cropping:hover::after {

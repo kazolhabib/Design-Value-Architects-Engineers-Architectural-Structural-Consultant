@@ -74,41 +74,41 @@ export default function Sidebar({ isOpen, onClose }) {
             {/* Navigation Links */}
             <div className="flex-1 overflow-y-auto px-8 py-10 flex flex-col gap-6">
               <nav className="flex flex-col gap-6 text-[1.25rem] font-medium font-display">
-                <Link href="/" onClick={onClose} className="hover:text-primary transition-colors py-2 border-b border-white/5">
+                <Link href="/" onClick={onClose} className="hover:text-white transition-colors py-2 border-b border-white/5">
                   HOME
                 </Link>
-                <Link href="/about-us" onClick={onClose} className="hover:text-primary transition-colors py-2 border-b border-white/5">
+                <Link href="/about-us" onClick={onClose} className="hover:text-white transition-colors py-2 border-b border-white/5">
                   ABOUT US
                 </Link>
-                <Link href="/our-services" onClick={onClose} className="hover:text-primary transition-colors py-2 border-b border-white/5">
+                <Link href="/our-services" onClick={onClose} className="hover:text-white transition-colors py-2 border-b border-white/5">
                   OUR SERVICES
                 </Link>
-                <Link href="/faq" onClick={onClose} className="hover:text-primary transition-colors py-2 border-b border-white/5">
+                <Link href="/faq" onClick={onClose} className="hover:text-white transition-colors py-2 border-b border-white/5">
                   FAQ
                 </Link>
-                <Link href="/our-project" onClick={onClose} className="hover:text-primary transition-colors py-2 border-b border-white/5">
+                <Link href="/our-project" onClick={onClose} className="hover:text-white transition-colors py-2 border-b border-white/5">
                   OUR PROJECT
                 </Link>
-                <Link href="/contact-us" onClick={onClose} className="hover:text-primary transition-colors py-2 border-b border-white/5">
+                <Link href="/contact-us" onClick={onClose} className="hover:text-white transition-colors py-2 border-b border-white/5">
                   CONTACT US
                 </Link>
               </nav>
 
               {/* Contact Details */}
               <div className="mt-10 flex flex-col gap-4 text-[0.875rem] text-white/70">
-                <h4 className="text-white font-bold text-[0.75rem] uppercase tracking-wider text-primary">Contact Info</h4>
+                <h4 className="text-white font-bold text-[0.75rem] uppercase tracking-wider">Contact Info</h4>
                 <div className="flex flex-col gap-3">
-                  <a href="tel:+8802223329893" className="hover:text-primary transition-colors flex items-center gap-2">
+                  <a href="tel:+8802223329893" className="hover:text-white transition-colors flex items-center gap-2">
                     <span>📞</span> +88-02-223329893
                   </a>
-                  <a href="mailto:info@designvaluebd.com" className="hover:text-primary transition-colors flex items-center gap-2">
+                  <a href="mailto:info@designvaluebd.com" className="hover:text-white transition-colors flex items-center gap-2">
                     <span>✉️</span> info@designvaluebd.com
                   </a>
                   <a
                     href="https://maps.app.goo.gl/2JE17aesqQF52Ch48"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-primary transition-colors flex items-start gap-2"
+                    className="hover:text-white transition-colors flex items-start gap-2"
                   >
                     <span>📍</span>
                     <span>House 5, Block A, Lalmatia,<br />Dhaka, Bangladesh</span>

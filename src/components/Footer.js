@@ -22,37 +22,37 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-white font-bold text-[0.875rem] tracking-wider uppercase mb-6 text-primary">Quick Links</h4>
+            <h4 className="text-white font-bold text-[0.875rem] tracking-wider uppercase mb-6">Quick Links</h4>
             <ul className="flex flex-col gap-3 text-[0.875rem]">
               <li>
-                <Link href="/" className="hover:text-primary transition-colors">Home</Link>
+                <Link href="/" className="hover:text-white transition-colors">Home</Link>
               </li>
               <li>
-                <Link href="/about-us" className="hover:text-primary transition-colors">About Us</Link>
+                <Link href="/about-us" className="hover:text-white transition-colors">About Us</Link>
               </li>
               <li>
-                <Link href="/our-services" className="hover:text-primary transition-colors">Our Services</Link>
+                <Link href="/our-services" className="hover:text-white transition-colors">Our Services</Link>
               </li>
               <li>
-                <Link href="/faq" className="hover:text-primary transition-colors">FAQ</Link>
+                <Link href="/faq" className="hover:text-white transition-colors">FAQ</Link>
               </li>
               <li>
-                <Link href="/our-project" className="hover:text-primary transition-colors">Our Project</Link>
+                <Link href="/our-project" className="hover:text-white transition-colors">Our Project</Link>
               </li>
             </ul>
           </div>
 
           {/* Contact Details */}
           <div>
-            <h4 className="text-white font-bold text-[0.875rem] tracking-wider uppercase mb-6 text-primary">Contact Us</h4>
+            <h4 className="text-white font-bold text-[0.875rem] tracking-wider uppercase mb-6">Contact Us</h4>
             <ul className="flex flex-col gap-3 text-[0.875rem]">
               <li className="flex items-center gap-2">
                 <span>📞</span>
-                <a href="tel:+8802223329893" className="hover:text-primary transition-colors">+88-02-223329893</a>
+                <a href="tel:+8802223329893" className="hover:text-white transition-colors">+88-02-223329893</a>
               </li>
               <li className="flex items-center gap-2">
                 <span>✉️</span>
-                <a href="mailto:info@designvaluebd.com" className="hover:text-primary transition-colors">info@designvaluebd.com</a>
+                <a href="mailto:info@designvaluebd.com" className="hover:text-white transition-colors">info@designvaluebd.com</a>
               </li>
               <li className="flex items-start gap-2">
                 <span>📍</span>
@@ -60,7 +60,7 @@ export default function Footer() {
                   href="https://maps.app.goo.gl/2JE17aesqQF52Ch48"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-primary transition-colors"
+                  className="hover:text-white transition-colors"
                 >
                   House 5, Block A, Lalmatia,<br />Dhaka, Bangladesh
                 </a>
@@ -75,9 +75,9 @@ export default function Footer() {
             &copy; 2025 – {new Date().getFullYear()} | All rights reserved by Design Value BD
           </div>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-primary transition-colors">Facebook</a>
-            <a href="#" className="hover:text-primary transition-colors">Twitter</a>
-            <a href="#" className="hover:text-primary transition-colors">LinkedIn</a>
+            <a href="#" className="hover:text-white transition-colors">Facebook</a>
+            <a href="#" className="hover:text-white transition-colors">Twitter</a>
+            <a href="#" className="hover:text-white transition-colors">LinkedIn</a>
           </div>
         </div>
       </div>
