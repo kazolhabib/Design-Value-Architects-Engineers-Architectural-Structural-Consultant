@@ -19,7 +19,7 @@ export default function Home() {
       <Hero />
 
       {/* Featured Work Section */}
-      <section id="featured-work" className="py-16 sm:py-20 lg:py-28 bg-white">
+      <section id="featured-work" className="py-16 sm:py-20 lg:py-33 bg-white">
         <div className="container-custom">
           {/* Top Row: Title + Description */}
           <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 lg:gap-16 mb-14 lg:mb-20">
@@ -50,7 +50,7 @@ export default function Home() {
           </div>
 
           {/* Project Grid — exact layout matching screenshot */}
-          <div className="grid grid-cols-12 gap-y-12 md:gap-y-0 gap-x-6 lg:gap-x-10 items-start mb-16 md:mb-24 lg:mb-28">
+          <div className="grid grid-cols-12 gap-y-12 md:gap-y-0 gap-x-6 lg:gap-x-10 items-start mb-16 md:mb-24 lg:mb-30">
             {/* Left: Ashulia Complex (larger, taking 7 columns) */}
             <Reveal duration={0.9} delay={0.1} y={40} className="col-span-12 md:col-span-7">
               <div className="group">
@@ -99,7 +99,7 @@ export default function Home() {
           </div>
 
           {/* Second Row: Sara Aftab + Esdo + Info Block */}
-          <div className="grid grid-cols-12 gap-y-12 md:gap-y-0 gap-x-6 lg:gap-x-10 items-start mb-16 md:mb-24 lg:mb-28">
+          <div className="grid grid-cols-12 gap-y-12 md:gap-y-0 gap-x-6 lg:gap-x-10 items-start mb-16 md:mb-24 lg:mb-30">
             {/* Sara Aftab Tower */}
             <Reveal duration={0.9} delay={0.1} y={40} className="col-span-12 md:col-span-4">
               <div className="group">
@@ -169,7 +169,7 @@ export default function Home() {
           </div>
 
           {/* Third Row: Stats + Noah City Center */}
-          <div className="grid grid-cols-12 gap-y-12 md:gap-y-0 gap-x-6 lg:gap-x-10 md:items-stretch items-start mb-16 md:mb-24 lg:mb-28">
+          <div className="grid grid-cols-12 gap-y-12 md:gap-y-0 gap-x-6 lg:gap-x-10 md:items-stretch items-start mb-16 md:mb-24 lg:mb-30">
             {/* Left: Stats Block */}
             <Reveal duration={0.9} delay={0.1} y={40} className="col-span-12 md:col-span-4 flex flex-col justify-between md:h-full pb-8">
               <div className="flex items-center gap-5">
