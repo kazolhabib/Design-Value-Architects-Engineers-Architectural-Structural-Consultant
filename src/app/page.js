@@ -3,9 +3,11 @@ import { Button } from "@heroui/react";
 import HeaderHome from "@/components/HeaderHome";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
+import TitleReveal from "@/components/TitleReveal";
 import Hero from "@/components/Hero";
 import Counter from "@/components/Counter";
 import TestimonialSlider from "@/components/TestimonialSlider";
+import Marquee from "@/components/Marquee";
 
 export default function Home() {
   return (
@@ -22,19 +24,22 @@ export default function Home() {
           {/* Top Row: Title + Description */}
           <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 lg:gap-16 mb-14 lg:mb-20">
             {/* Left: Label + Big Title */}
-            <Reveal duration={0.8} y={30}>
-              <div>
+            <div>
+              <Reveal duration={0.8} y={20}>
                 <div className="flex items-center gap-4 mb-4">
                   <span className="text-[0.75rem] sm:text-[0.8125rem] font-bold text-black-2 tracking-[0.2em] uppercase">
                     FEATURED WORK
                   </span>
                   <div className="w-12 h-[2px] bg-primary" />
                 </div>
-                <h2 className="font-display font-semibold text-[2.5rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[4rem] xl:text-[4.5rem] leading-[0.95] text-black-2 tracking-tight uppercase">
-                  OUR CREATIVE<br />WORK
-                </h2>
-              </div>
-            </Reveal>
+              </Reveal>
+              <TitleReveal
+                lines={["OUR CREATIVE", "WORK"]}
+                as="h2"
+                delay={0.1}
+                className="font-display font-semibold text-[2.5rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[4rem] xl:text-[4.5rem] leading-[0.95] text-black-2 tracking-tight uppercase"
+              />
+            </div>
 
             {/* Right: Description Paragraph */}
             <Reveal duration={0.8} delay={0.2} y={30}>
@@ -309,6 +314,159 @@ export default function Home() {
           className="object-cover"
         />
       </div>
+
+      {/* Services Section */}
+      <section className="py-16 sm:py-20 lg:py-28 bg-white border-t border-gray-100">
+        <div className="container-custom">
+          {/* Top Row: Title */}
+          <div className="mb-14 lg:mb-20">
+            <div>
+              <Reveal duration={0.8} y={20}>
+                <div className="flex items-center gap-4 mb-4">
+                  <span className="text-base font-medium text-black-2 tracking-[0.2em] uppercase">
+                    FEATURED WORK
+                  </span>
+                  <div className="w-12 h-[2px] bg-black" />
+                </div>
+              </Reveal>
+              <TitleReveal
+                lines={["WE’RE PROVIDING", "EXCLUSIVE ARCH", "SERVICE"]}
+                as="h2"
+                delay={0.1}
+                className="font-display font-semibold text-[2.5rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[4rem] xl:text-[4.5rem] leading-[0.95] text-black-2 tracking-tight uppercase"
+              />
+            </div>
+          </div>
+
+          {/* Services List Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 lg:gap-x-16 items-start">
+            {/* Left Column */}
+            <div className="flex flex-col">
+              {/* 01 ARCHITECTURAL DESIGN */}
+              <Reveal duration={0.8} delay={0.1} y={30}>
+                <div className="group flex items-center justify-between py-5 sm:py-6 border-t border-gray-200 cursor-pointer">
+                  <div className="flex items-center gap-6 sm:gap-10">
+                    <span className="text-gray-400 text-[0.8125rem] sm:text-[0.875rem] font-sans font-semibold tracking-wider">
+                      01
+                    </span>
+                    <span className="text-black-2 font-display font-bold text-[1.125rem] sm:text-[1.25rem] md:text-[1.375rem] uppercase tracking-wide transform group-hover:translate-x-2 transition-transform duration-300">
+                      ARCHITECTURAL DESIGN
+                    </span>
+                  </div>
+                  <svg className="w-4.5 h-4.5 text-black transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path>
+                  </svg>
+                </div>
+              </Reveal>
+              
+              {/* 02 PROJECT PLANNING */}
+              <Reveal duration={0.8} delay={0.2} y={30}>
+                <div className="group flex items-center justify-between py-5 sm:py-6 border-t border-gray-200 cursor-pointer">
+                  <div className="flex items-center gap-6 sm:gap-10">
+                    <span className="text-gray-400 text-[0.8125rem] sm:text-[0.875rem] font-sans font-semibold tracking-wider">
+                      02
+                    </span>
+                    <span className="text-black-2 font-display font-bold text-[1.125rem] sm:text-[1.25rem] md:text-[1.375rem] uppercase tracking-wide transform group-hover:translate-x-2 transition-transform duration-300">
+                      PROJECT PLANNING
+                    </span>
+                  </div>
+                  <svg className="w-4.5 h-4.5 text-black transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path>
+                  </svg>
+                </div>
+              </Reveal>
+
+              {/* 03 INTERIOR DESIGN */}
+              <Reveal duration={0.8} delay={0.3} y={30}>
+                <div className="group flex items-center justify-between py-5 sm:py-6 border-t border-b border-gray-200 cursor-pointer">
+                  <div className="flex items-center gap-6 sm:gap-10">
+                    <span className="text-gray-400 text-[0.8125rem] sm:text-[0.875rem] font-sans font-semibold tracking-wider">
+                      03
+                    </span>
+                    <span className="text-black-2 font-display font-bold text-[1.125rem] sm:text-[1.25rem] md:text-[1.375rem] uppercase tracking-wide transform group-hover:translate-x-2 transition-transform duration-300">
+                      INTERIOR DESIGN
+                    </span>
+                  </div>
+                  <svg className="w-4.5 h-4.5 text-black transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path>
+                  </svg>
+                </div>
+              </Reveal>
+            </div>
+
+            {/* Right Column */}
+            <div className="flex flex-col">
+              {/* 04 RENOVATION */}
+              <Reveal duration={0.8} delay={0.1} y={30}>
+                <div className="group flex items-center justify-between py-5 sm:py-6 border-t-0 md:border-t border-gray-200 cursor-pointer">
+                  <div className="flex items-center gap-6 sm:gap-10">
+                    <span className="text-gray-400 text-[0.8125rem] sm:text-[0.875rem] font-sans font-semibold tracking-wider">
+                      04
+                    </span>
+                    <span className="text-black-2 font-display font-bold text-[1.125rem] sm:text-[1.25rem] md:text-[1.375rem] uppercase tracking-wide transform group-hover:translate-x-2 transition-transform duration-300">
+                      RENOVATION
+                    </span>
+                  </div>
+                  <svg className="w-4.5 h-4.5 text-black transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path>
+                  </svg>
+                </div>
+              </Reveal>
+
+              {/* 05 HISTORIC PREVENTION */}
+              <Reveal duration={0.8} delay={0.2} y={30}>
+                <div className="group flex items-center justify-between py-5 sm:py-6 border-t border-gray-200 cursor-pointer">
+                  <div className="flex items-center gap-6 sm:gap-10">
+                    <span className="text-gray-400 text-[0.8125rem] sm:text-[0.875rem] font-sans font-semibold tracking-wider">
+                      05
+                    </span>
+                    <span className="text-black-2 font-display font-bold text-[1.125rem] sm:text-[1.25rem] md:text-[1.375rem] uppercase tracking-wide transform group-hover:translate-x-2 transition-transform duration-300">
+                      HISTORIC PREVENTION
+                    </span>
+                  </div>
+                  <svg className="w-4.5 h-4.5 text-black transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path>
+                  </svg>
+                </div>
+              </Reveal>
+
+              {/* 06 VISUALIZATION */}
+              <Reveal duration={0.8} delay={0.3} y={30}>
+                <div className="group flex items-center justify-between py-5 sm:py-6 border-t border-gray-200 border-b cursor-pointer">
+                  <div className="flex items-center gap-6 sm:gap-10">
+                    <span className="text-gray-400 text-[0.8125rem] sm:text-[0.875rem] font-sans font-semibold tracking-wider">
+                      06
+                    </span>
+                    <span className="text-black-2 font-display font-bold text-[1.125rem] sm:text-[1.25rem] md:text-[1.375rem] uppercase tracking-wide transform group-hover:translate-x-2 transition-transform duration-300">
+                      VISUALIZATION
+                    </span>
+                  </div>
+                  <svg className="w-4.5 h-4.5 text-black transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path>
+                  </svg>
+                </div>
+              </Reveal>
+            </div>
+          </div>
+
+          {/* Centered CTA Banner */}
+          <div className="text-center pt-24 pb-8 sm:pt-28 md:pt-36">
+            <TitleReveal
+              lines={["READY TO BUILD YOUR", "DREAM TOGETHER?"]}
+              as="h2"
+              className="font-display font-semibold text-[2.25rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[4rem] text-black leading-tight uppercase tracking-tight mb-8 max-w-4xl mx-auto"
+            />
+            <Reveal duration={0.8} delay={0.1} y={20}>
+              <button className="btn-hover-cropping bg-black text-white font-bold rounded-full py-4.5 px-9 text-[0.8125rem] tracking-wider uppercase border border-black cursor-pointer inline-flex items-center justify-center">
+                <span className="relative z-10">GET ESTIMATED RATE</span>
+              </button>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* Partners Marquee */}
+      <Marquee />
 
       {/* Global Footer */}
       <Footer />

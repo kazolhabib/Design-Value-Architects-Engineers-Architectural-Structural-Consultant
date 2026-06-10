@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Reveal from "./Reveal";
+import TitleReveal from "./TitleReveal";
 
 export default function Hero() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
@@ -91,11 +92,12 @@ export default function Hero() {
 
           {/* 2. Giant Overlapping Title (on top of building — z-30) */}
           <div className="absolute top-4 left-[22%] xl:left-[24%] z-30 select-none pointer-events-none">
-            <Reveal duration={1.2} delay={0.15} y={40}>
-              <h1 className="font-display font-bold text-[7rem] xl:text-[7.85rem] leading-[1] text-[#0c0c0e] tracking-">
-                ARCHI—<br />TECTURE
-              </h1>
-            </Reveal>
+            <TitleReveal
+              lines={["ARCHI—", "TECTURE"]}
+              as="h1"
+              delay={0.15}
+              className="font-display font-bold text-[7rem] xl:text-[7.85rem] leading-[0.9] text-[#0c0c0e]"
+            />
           </div>
 
           {/* 3. Center Content Column (spans columns 6 to 9, pushed down below title) */}
@@ -170,7 +172,7 @@ export default function Hero() {
         {/* MOBILE & TABLET LAYOUT (lg:hidden) */}
         <div className="lg:hidden flex flex-col gap-6 sm:gap-8 w-full relative z-10 px-1">
           {/* Building image */}
-          <div className="w-full flex justify-center">
+          <div className="hidden sm:flex w-full justify-center">
             <div className="relative w-[75%] sm:w-[65%] md:w-[50%] max-w-[22rem] md:max-w-[28rem] aspect-[4/5]">
               <Image
                 src="/assets/uploads/2025/07/Revised-20.10.2016-png.png"
@@ -185,9 +187,11 @@ export default function Hero() {
 
           {/* Title and since */}
           <div>
-            <h1 className="font-display font-bold text-[2.75rem] sm:text-[3.5rem] md:text-[5rem] leading-[0.9] text-black-2 tracking-tighter">
-              ARCHI—<br />TECTURE
-            </h1>
+            <TitleReveal
+              lines={["ARCHI—", "TECTURE"]}
+              as="h1"
+              className="font-display font-bold text-[2.75rem] sm:text-[3.5rem] md:text-[5rem] leading-[0.9] text-black-2 tracking-tighter"
+            />
             <div className="font-display font-semibold text-[0.875rem] sm:text-[1rem] text-black-2 tracking-widest uppercase mt-3 sm:mt-4">
               SINCE 2008
             </div>

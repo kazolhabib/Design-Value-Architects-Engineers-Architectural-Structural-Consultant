@@ -34,7 +34,7 @@ export default function HeaderHome() {
             alt="Design Value Logo"
             width={240}
             height={72}
-            className="object-contain h-12 w-auto"
+            className="object-contain h-[44px] sm:h-[50px] md:h-[56px] w-auto"
             priority={true}
             loading="eager"
           />
@@ -66,7 +66,7 @@ export default function HeaderHome() {
           {/* Hamburger Menu Trigger */}
           <button
             onClick={() => setIsSidebarOpen(true)}
-            className={`w-10 h-10 md:w-11 md:h-11 rounded-full border flex flex-col gap-1.5 justify-center items-center hover:bg-gray-50 hover:border-gray-400 transition-all cursor-pointer ${
+            className={`w-10 h-10 md:w-16 md:h-10 rounded-full border flex flex-col gap-1.5 justify-center items-center hover:bg-gray-50 hover:border-gray-400 transition-all cursor-pointer ${
               scrolled ? "border-gray-200" : "border-gray-300"
             }`}
             aria-label="Open menu"
