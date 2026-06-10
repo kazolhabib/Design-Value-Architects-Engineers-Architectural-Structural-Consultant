@@ -56,8 +56,10 @@ export default function HeaderInternal() {
               <Link
                 key={link.name}
                 href={link.path}
-                className={`font-sans font-medium text-sm tracking-wider transition-colors duration-300 hover:text-black ${
-                  isActive ? "text-black border-b-2 border-black pb-1" : "text-black-2"
+                className={`font-sans font-medium text-sm tracking-wider transition-colors duration-300 ${
+                  isActive
+                    ? "text-[#ff5e14] border-b-2 border-[#ff5e14] pb-1"
+                    : "text-black-2 pb-1.5 nav-link-internal"
                 }`}
               >
                 {link.name}
@@ -70,8 +72,10 @@ export default function HeaderInternal() {
         <div className="flex items-center">
           <Link
             href="/contact-us"
-            className={`font-sans font-medium text-sm tracking-wider transition-colors duration-300 hover:text-black ${
-              pathname === "/contact-us" ? "text-black border-b-2 border-black pb-1" : "text-black-2"
+            className={`font-sans font-medium text-sm tracking-wider transition-colors duration-300 ${
+              pathname === "/contact-us"
+                ? "text-[#ff5e14] border-b-2 border-[#ff5e14] pb-1"
+                : "text-black-2 pb-1.5 nav-link-internal"
             }`}
           >
             CONTACT US

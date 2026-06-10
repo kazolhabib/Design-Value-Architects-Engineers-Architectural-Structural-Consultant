@@ -20,7 +20,7 @@ export default function AboutUs() {
           <div className="grid grid-cols-12 gap-y-12 lg:gap-y-0 lg:gap-x-12 items-end relative">
             
             {/* Left Column: Construction Site Vertical Image */}
-            <div className="col-span-12 lg:col-span-5 relative z-0">
+            <div className="hidden lg:block lg:col-span-5 relative z-0">
               <Reveal duration={1.1} y={40}>
                 <div className="relative w-full aspect-[3/3.8] overflow-hidden shadow-2xl bg-gray-50 border border-gray-100">
                   <Image
@@ -43,13 +43,13 @@ export default function AboutUs() {
                 <TitleReveal
                   lines={["ABOUT STORIES"]}
                   as="h1"
-                  className="font-display font-extrabold text-[2.5rem] sm:text-[4rem] md:text-[5rem] lg:text-[5.5rem] leading-[0.95] text-black tracking-tight uppercase lg:-ml-32 xl:-ml-48"
+                  className="font-display font-medium text-[2.5rem] sm:text-[4rem] md:text-[5rem] lg:text-[6rem] leading-[0.95] text-black tracking-tight uppercase lg:-ml-32 xl:-ml-48"
                 />
                 <TitleReveal
                   lines={["CONSTRUCTION"]}
                   as="h1"
                   delay={0.12}
-                  className="font-display font-extrabold text-[3rem] sm:text-[4.75rem] md:text-[6rem] lg:text-[6.5rem] leading-[0.95] text-[#ff5e14] tracking-tight uppercase lg:ml-24 xl:ml-36"
+                  className="font-display font-medium text-[3rem] sm:text-[4.75rem] md:text-[6rem] lg:text-[6.5rem] leading-[0.95] text-[#ff5e14] tracking-tight uppercase lg:ml-24 xl:ml-36"
                 />
               </div>
 
@@ -59,7 +59,7 @@ export default function AboutUs() {
                 {/* Paragraph Details & EXPLORE SERVICES Button */}
                 <div className="flex flex-col gap-8">
                   <Reveal duration={0.8} delay={0.2} y={30}>
-                    <p className="text-gray-600 text-[0.9375rem] leading-relaxed max-w-[24rem]">
+                    <p className="text-gray-700 text-base leading-relaxed max-w-[24rem]">
                       Design Value Architects & Engineers (DVAE) was established in the year 2008 as a premier consultancy organization providing architectural & structural consultancy with detailed planning, design and engineering for varied and diverse discipline of projects. Its professional achievements include a large number of consultancy assignments.
                     </p>
                   </Reveal>
@@ -67,7 +67,7 @@ export default function AboutUs() {
                   <Reveal duration={0.8} delay={0.3} y={20}>
                     <div>
                       <Link href="/our-services">
-                        <span className="bg-black text-white hover:bg-[#ff5e14] transition-colors duration-300 font-bold py-4 px-8 uppercase tracking-wider text-[0.8125rem] border border-black hover:border-[#ff5e14] cursor-pointer inline-flex items-center justify-center">
+                        <span className="btn-hover-cropping-orange bg-black text-white font-bold py-4 px-8 uppercase tracking-wider text-[0.8125rem] border border-black cursor-pointer inline-flex items-center justify-center">
                           EXPLORE SERVICES
                         </span>
                       </Link>
