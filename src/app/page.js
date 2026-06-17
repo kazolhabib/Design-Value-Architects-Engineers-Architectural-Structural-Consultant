@@ -174,7 +174,7 @@ export default function Home() {
             <Reveal duration={0.9} delay={0.1} y={40} className="col-span-12 md:col-span-4 flex flex-col justify-between md:h-full pb-8">
               <div className="flex items-center gap-5">
                 <span className="text-[1rem] font-sans font-medium text-black tracking-wide uppercase">
-                  WHY WE'RE BEST
+                  WHY WE&apos;RE BEST
                 </span>
                 <div className="w-20 h-[1px] bg-black" />
               </div>

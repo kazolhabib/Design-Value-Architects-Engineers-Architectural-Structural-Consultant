@@ -1,30 +1,30 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-export default function TestimonialSlider() {
-  const testimonials = [
-    {
-      quote:
-        "Williamsburg next level flexitarian yr bicycle rights waistcoat 8-bit Austin. Tofu glossier whatever, scenester snack wave literally shaman grained. The incredible site it was mind blowing and everything we gotten vented.",
-      author: "DAVID K. ROZAR",
-      role: "MANAGER",
-    },
-    {
-      quote:
-        "DVAE specializes in the provision of design, construction supervision and project management for clients in the governmental, private and public sectors and offers comprehensive package of services.",
-      author: "Asraful Alam Nasim",
-      role: "Architect",
-    },
-    {
-      quote:
-        "Design Value Architects & Engineers has successfully completed more than 650 projects with outstanding creativity, structural precision, and dedication to architectural excellence.",
-      author: "M. A. RAHMAN",
-      role: "CHIEF ARCHITECT",
-    },
-  ];
+const testimonials = [
+  {
+    quote:
+      "Williamsburg next level flexitarian yr bicycle rights waistcoat 8-bit Austin. Tofu glossier whatever, scenester snack wave literally shaman grained. The incredible site it was mind blowing and everything we gotten vented.",
+    author: "DAVID K. ROZAR",
+    role: "MANAGER",
+  },
+  {
+    quote:
+      "DVAE specializes in the provision of design, construction supervision and project management for clients in the governmental, private and public sectors and offers comprehensive package of services.",
+    author: "Asraful Alam Nasim",
+    role: "Architect",
+  },
+  {
+    quote:
+      "Design Value Architects & Engineers has successfully completed more than 650 projects with outstanding creativity, structural precision, and dedication to architectural excellence.",
+    author: "M. A. RAHMAN",
+    role: "CHIEF ARCHITECT",
+  },
+];
 
+export default function TestimonialSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0); // -1 for prev, 1 for next
 
@@ -43,15 +43,15 @@ export default function TestimonialSlider() {
     }),
   };
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setDirection(1);
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-  };
+  }, []);
 
-  const prevSlide = () => {
+  const prevSlide = useCallback(() => {
     setDirection(-1);
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
+  }, []);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -59,7 +59,7 @@ export default function TestimonialSlider() {
     }, 5000); // Autoplay every 5 seconds
 
     return () => clearInterval(timer);
-  }, [currentIndex]);
+  }, [nextSlide]);
 
   return (
     <div className="py-20 sm:py-24 lg:py-28 bg-white border-t border-gray-100">

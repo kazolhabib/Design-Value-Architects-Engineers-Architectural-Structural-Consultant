@@ -41,7 +41,7 @@ export default function NotFound() {
             {/* Description */}
             <Reveal duration={0.8} delay={0.4} y={20}>
               <p className="text-gray-600 text-[1rem] leading-relaxed mb-10 max-w-[32rem] mx-auto">
-                The link you followed might be broken, or the page may have been removed. Let's get you back on track to exploring our architectural and structural designs.
+                The link you followed might be broken, or the page may have been removed. Let&apos;s get you back on track to exploring our architectural and structural designs.
               </p>
             </Reveal>
 
