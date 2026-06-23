@@ -43,8 +43,7 @@ export default function HeaderInternal({ forceWhite = false }) {
             width={240}
             height={72}
             className="object-contain h-[44px] sm:h-[50px] md:h-[56px] w-auto"
-            loading="eager"
-            fetchPriority="high"
+            preload
           />
         </Link>
 

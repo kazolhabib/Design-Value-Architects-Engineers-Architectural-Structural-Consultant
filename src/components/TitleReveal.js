@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-export default function TitleReveal({ lines, className = "", delay = 0, as = "div" }) {
+export default function TitleReveal({ lines, className = "", lineClassNames = [], delay = 0, as = "div" }) {
   const Component = motion[as] || motion.div;
 
   const containerVariants = {
@@ -37,10 +37,7 @@ export default function TitleReveal({ lines, className = "", delay = 0, as = "di
     >
       {lines.map((line, idx) => (
         <span key={idx} className="overflow-hidden py-1.5 block relative">
-          <motion.span
-            variants={lineVariants}
-            className="block"
-          >
+          <motion.span variants={lineVariants} className={`block ${lineClassNames[idx] || ""}`}>
             {line}
           </motion.span>
         </span>

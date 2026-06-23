@@ -15,6 +15,7 @@ export default function Footer() {
                 width={200}
                 height={60}
                 className="object-contain h-[52px] sm:h-[62px] md:h-[72px] w-auto mb-6"
+                loading="eager"
               />
             </Link>
             {/* Social Icons circles (light gray background, black hover) */}

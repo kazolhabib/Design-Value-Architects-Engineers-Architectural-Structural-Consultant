@@ -60,6 +60,7 @@ export default function Sidebar({ isOpen, onClose }) {
                     width={240}
                     height={72}
                     className="object-contain h-[52px] md:h-[60px] lg:h-[68px] w-auto"
+                    loading="eager"
                   />
                 </Link>
               </div>
@@ -152,6 +153,7 @@ export default function Sidebar({ isOpen, onClose }) {
                     width={200}
                     height={60}
                     className="object-contain h-[44px] w-auto brightness-0 invert"
+                    loading="eager"
                   />
                 </Link>
               </div>
