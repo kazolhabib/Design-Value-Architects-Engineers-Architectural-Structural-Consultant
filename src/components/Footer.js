@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-8 lg:gap-12 mb-16 items-start">
           {/* Logo and Socials Column */}
-          <div className="col-span-12 md:col-span-4 lg:col-span-3">
+          <div className="col-span-full md:col-span-4 lg:col-span-3">
             <Link href="/" className="inline-block">
               <Image
                 src="/assets/uploads/2024/07/designvaluelogo.png"
@@ -61,7 +61,7 @@ export default function Footer() {
           </div>
 
           {/* Information Column */}
-          <div className="col-span-6 md:col-span-3 lg:col-span-2">
+          <div className="col-span-full md:col-span-3 lg:col-span-2">
             <h4 className="text-black font-display font-medium text-[20px] uppercase mb-6 tracking-wide">
               INFORMATION
             </h4>
@@ -110,7 +110,7 @@ export default function Footer() {
           </div>
 
           {/* Contact Column */}
-          <div className="col-span-6 md:col-span-5 lg:col-span-3">
+          <div className="col-span-full md:col-span-5 lg:col-span-3">
             <h4 className="text-black font-display font-medium text-[20px] uppercase mb-6 tracking-wide">
               CONTACT
             </h4>
@@ -146,7 +146,7 @@ export default function Footer() {
           </div>
 
           {/* Map Column */}
-          <div className="col-span-12 md:col-span-12 lg:col-span-4">
+          <div className="col-span-full md:col-span-12 lg:col-span-4">
             <a
               href="https://maps.app.goo.gl/rHA5txz4AbvSyv8Z6"
               target="_blank"

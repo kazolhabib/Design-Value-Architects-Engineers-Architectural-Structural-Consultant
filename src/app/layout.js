@@ -46,8 +46,9 @@ export default function RootLayout({ children }) {
     <html
       lang="en"
       className={`${spaceGrotesk.variable} ${euclidCircularB.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col font-sans">
+      <body className="min-h-full flex flex-col font-sans" suppressHydrationWarning>
         <Providers>
           {children}
         </Providers>
@@ -55,5 +56,4 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-
 

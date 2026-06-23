@@ -5,7 +5,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 
-export default function HeaderInternal() {
+export default function HeaderInternal({ forceWhite = false }) {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
 
@@ -29,7 +29,7 @@ export default function HeaderInternal() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-40 py-5 transition-all duration-400 ${
-        scrolled
+        scrolled || forceWhite
           ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100"
           : "bg-transparent"
       }`}
@@ -43,7 +43,8 @@ export default function HeaderInternal() {
             width={240}
             height={72}
             className="object-contain h-[44px] sm:h-[50px] md:h-[56px] w-auto"
-            priority={true}
+            loading="eager"
+            fetchPriority="high"
           />
         </Link>
 

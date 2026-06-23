@@ -149,7 +149,19 @@ export default function AboutUs() {
 
         {/* Stats & Timeline Section */}
         <section className="py-20 lg:py-28 bg-white relative overflow-hidden">
-          <div className="container-custom">
+          <div className="absolute right-0 bottom-0 hidden h-[38rem] w-[52rem] pointer-events-none select-none opacity-100 mix-blend-multiply lg:block">
+            <Image
+              src="/assets/BG-image.png"
+              alt="Architectural House Sketch Background"
+              fill
+              sizes="52rem"
+              loading="eager"
+              fetchPriority="high"
+              className="object-contain object-right-bottom"
+            />
+          </div>
+
+          <div className="container-custom relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
               
               {/* Left Column: Title & Timeline */}
@@ -223,17 +235,6 @@ export default function AboutUs() {
               {/* Right Column: Stats Grid */}
               <div className="lg:col-span-5 flex flex-col justify-between h-full relative py-2 lg:py-6">
                 
-                {/* Background Architectural Sketch */}
-                <div className="absolute right-0 bottom-0 w-[85%] md:w-[70%] lg:w-[90%] aspect-[549/700] pointer-events-none select-none z-0 opacity-[0.04] mix-blend-multiply">
-                  <Image
-                    src="/assets/uploads/2025/07/HomeLink-1.png"
-                    alt="Architectural House Sketch Background"
-                    fill
-                    sizes="(max-width: 1024px) 70vw, 40vw"
-                    className="object-contain object-right-bottom"
-                  />
-                </div>
-
                 {/* 2x2 Stats Grid */}
                 <div className="grid grid-cols-2 gap-x-8 gap-y-12 relative z-10 mb-16">
                   
@@ -347,6 +348,7 @@ export default function AboutUs() {
                         width={60}
                         height={60}
                         className="object-contain opacity-70"
+                        style={{ width: "60px", height: "auto" }}
                       />
                     </div>
                   </Reveal>
