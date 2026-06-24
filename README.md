@@ -112,15 +112,29 @@ Checks the project with ESLint.
 
 ## Deployment
 
-Recommended deployment platform: Vercel.
+Recommended deployment platform: Cloudflare Workers via OpenNext.
 
-Suggested flow:
+Cloudflare scripts:
 
-1. Push the latest code to GitHub.
-2. Import the GitHub repository into Vercel.
-3. Keep the framework preset as Next.js.
-4. Use the default build command: `npm run build`.
-5. Connect the production domain after the first successful deployment.
+```bash
+npm run preview
+```
+
+Builds the app and previews it locally in the Cloudflare Workers runtime.
+
+```bash
+npm run deploy
+```
+
+Builds the app and deploys it to Cloudflare Workers.
+
+Before first production deploy, authorize Wrangler:
+
+```bash
+npx wrangler login
+```
+
+If the Cloudflare account does not yet have a `workers.dev` subdomain, register it in the Cloudflare dashboard or configure a custom route/domain in `wrangler.jsonc`.
 
 ## Notes
 
