@@ -179,3 +179,29 @@ body {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+
+/* Home Header Phone Hover Underline */
+.header-phone-link {
+  position: relative;
+}
+
+.header-phone-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: #ff5e14;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.35s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.header-phone-link:hover {
+  color: #ff5e14;
+}
+
+.header-phone-link:hover::after {
+  transform: scaleX(1);
+}

@@ -45,11 +45,7 @@ export default function HeaderHome() {
             {/* Phone Link (Underlined) */}
             <a
               href="tel:+8802223329893"
-              className={`hidden sm:inline-block font-sans font-medium hover:text-black-2 transition-colors pb-0.5 text-[0.875rem] md:text-[0.9375rem] border-b ${
-                scrolled
-                  ? "text-black-2 border-black hover:border-black-2"
-                  : "text-black-2 border-black hover:border-black-2"
-              }`}
+              className="header-phone-link hidden sm:inline-block font-sans font-medium text-black-2 transition-colors pb-1 text-[0.875rem] md:text-[0.9375rem]"
             >
               +88-02-223329893
             </a>

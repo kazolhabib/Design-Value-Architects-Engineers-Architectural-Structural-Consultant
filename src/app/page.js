@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Button } from "@heroui/react";
+import Link from "next/link";
 import HeaderHome from "@/components/HeaderHome";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
@@ -54,11 +54,12 @@ export default function Home() {
             {/* Left: Ashulia Complex (larger, taking 7 columns) */}
             <Reveal duration={0.9} delay={0.1} y={40} className="col-span-12 md:col-span-7">
               <div className="group">
-                <div className="relative w-full aspect-[4/3.2] overflow-hidden bg-gray-100">
+                <div className="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                   <Image
                     src="/assets/uploads/2025/07/3a-copy-scaled.jpg"
                     alt="Ashulia Complex"
                     fill
+                    loading="eager"
                     sizes="(max-width: 768px) 100vw, 58vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
                   />
@@ -79,7 +80,7 @@ export default function Home() {
               <div className="group">
                 <div className="relative w-full aspect-[3/4] overflow-hidden bg-gray-100">
                   <Image
-                    src="/assets/uploads/2025/07/milari.png"
+                    src="/assets/uploads/2025/07/Fornt-01-1536x2048.png"
                     alt="Miladri"
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
@@ -162,9 +163,9 @@ export default function Home() {
               <p className="text-gray-600 text-[0.9375rem] font-medium sm:text-lg leading-relaxed mb-10 max-w-[28rem]">
                 DVAE was established in the year 2008 as a premier consultancy organization providing architectural & structural consultancy with detailed planning, design and engineering for varied and diverse discipline of projects. Its professional achievements include a large number of consultancy assignments.
               </p>
-              <button className="btn-hover-cropping bg-black text-white font-semibold rounded-full py-5 px-11 text-[0.90rem] tracking-wider uppercase border border-black cursor-pointer inline-flex items-center justify-center">
+              <Link href="/about-us" className="btn-hover-cropping bg-black text-white font-semibold rounded-full py-5 px-11 text-[0.90rem] tracking-wider uppercase border border-black cursor-pointer inline-flex items-center justify-center">
                 <span className="relative z-10">SEE MORE</span>
-              </button>
+              </Link>
             </Reveal>
           </div>
 
@@ -221,9 +222,9 @@ export default function Home() {
             {/* Right: Noah City Center */}
             <Reveal duration={0.9} delay={0.2} y={40} className="col-span-12 md:col-span-8">
               <div className="group">
-                <div className="relative w-full aspect-[16/10] overflow-hidden bg-gray-100">
+                <div className="relative w-full aspect-[3/2] overflow-hidden bg-gray-100">
                   <Image
-                    src="/assets/other/our-project/building.jpg"
+                    src="/assets/uploads/2025/07/ext6-copy-1536x1023.jpg"
                     alt="Noah City Center"
                     fill
                     priority
@@ -244,11 +245,11 @@ export default function Home() {
           </div>
 
           {/* Fourth Row: Chuadanga Police Shopping Mall + Makka Shopping Mall */}
-          <div className="grid grid-cols-12 gap-y-12 md:gap-y-0 gap-x-6 lg:gap-x-10 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-[minmax(0,2.2fr)_minmax(0,1fr)] gap-y-12 md:gap-y-0 gap-x-6 lg:gap-x-[4.75rem] items-start">
             {/* Left: Chuadanga Police Shopping Mall (larger, taking 7 columns) */}
-            <Reveal duration={0.9} delay={0.1} y={40} className="col-span-12 md:col-span-7">
+            <Reveal duration={0.9} delay={0.1} y={40}>
               <div className="group">
-                <div className="relative w-full aspect-[4/3.2] overflow-hidden bg-gray-100">
+                <div className="relative w-full aspect-[20/13] overflow-hidden bg-gray-100">
                   <Image
                     src="/assets/uploads/2025/07/police-shopping.png"
                     alt="Chuadanga Police Shopping Mall"
@@ -269,9 +270,9 @@ export default function Home() {
             </Reveal>
 
             {/* Right: Makka Shopping Mall (portrait, taking 4 columns, starting at column 9, aligned top) */}
-            <Reveal duration={0.9} delay={0.3} y={50} className="col-span-12 md:col-span-4 md:col-start-9">
+            <Reveal duration={0.9} delay={0.3} y={50}>
               <div className="group">
-                <div className="relative w-full aspect-[3/4] overflow-hidden bg-gray-100">
+                <div className="relative w-full aspect-[18/25] overflow-hidden bg-gray-100">
                   <Image
                     src="/assets/uploads/2025/07/makka.png"
                     alt="Makka Shopping Mall"
@@ -294,9 +295,9 @@ export default function Home() {
 
           {/* Centered Button: View All Works */}
           <Reveal duration={0.8} delay={0.1} y={20} className="flex justify-center mt-16 sm:mt-20 lg:mt-24">
-            <button className="btn-hover-cropping bg-black text-white font-bold rounded-full py-5 px-10 text-[0.8125rem] tracking-wider uppercase border border-black cursor-pointer inline-flex items-center justify-center">
+            <Link href="/our-project" className="btn-hover-cropping bg-black text-white font-bold rounded-full py-5 px-10 text-[0.8125rem] tracking-wider uppercase border border-black cursor-pointer inline-flex items-center justify-center">
               <span className="relative z-10">VIEW ALL WORKS</span>
-            </button>
+            </Link>
           </Reveal>
         </div>
       </section>
@@ -305,7 +306,7 @@ export default function Home() {
       <TestimonialSlider />
 
       {/* Full-width Cover Image */}
-      <div className="relative w-full h-[20rem] sm:h-[25rem] md:h-[30rem] lg:h-[35rem] xl:h-[40rem] overflow-hidden">
+      <div className="relative w-full h-[12.5rem] sm:h-[22rem] md:h-[27rem] lg:h-[33rem] xl:h-[37.5rem] overflow-hidden">
         <Image
           src="/assets/uploads/2025/07/TOP-scaled.jpg"
           alt="Design Value Outdoor Terrace Banner"
@@ -344,7 +345,7 @@ export default function Home() {
             <div className="flex flex-col">
               {/* 01 ARCHITECTURAL DESIGN */}
               <Reveal duration={0.8} delay={0.1} y={30}>
-                <div className="group flex items-center justify-between py-5 sm:py-6 border-t border-gray-200 cursor-pointer">
+                <Link href="/our-services" className="group flex items-center justify-between py-5 sm:py-6 border-t border-gray-200 cursor-pointer">
                   <div className="flex items-center gap-6 sm:gap-10">
                     <span className="text-gray-400 text-[0.8125rem] sm:text-[0.875rem] font-sans font-semibold tracking-wider">
                       01
@@ -356,12 +357,12 @@ export default function Home() {
                   <svg className="w-4.5 h-4.5 text-black transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path>
                   </svg>
-                </div>
+                </Link>
               </Reveal>
               
               {/* 02 PROJECT PLANNING */}
               <Reveal duration={0.8} delay={0.2} y={30}>
-                <div className="group flex items-center justify-between py-5 sm:py-6 border-t border-gray-200 cursor-pointer">
+                <Link href="/our-services" className="group flex items-center justify-between py-5 sm:py-6 border-t border-gray-200 cursor-pointer">
                   <div className="flex items-center gap-6 sm:gap-10">
                     <span className="text-gray-400 text-[0.8125rem] sm:text-[0.875rem] font-sans font-semibold tracking-wider">
                       02
@@ -373,12 +374,12 @@ export default function Home() {
                   <svg className="w-4.5 h-4.5 text-black transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path>
                   </svg>
-                </div>
+                </Link>
               </Reveal>
 
               {/* 03 INTERIOR DESIGN */}
               <Reveal duration={0.8} delay={0.3} y={30}>
-                <div className="group flex items-center justify-between py-5 sm:py-6 border-t border-b border-gray-200 cursor-pointer">
+                <Link href="/our-services" className="group flex items-center justify-between py-5 sm:py-6 border-t border-b border-gray-200 cursor-pointer">
                   <div className="flex items-center gap-6 sm:gap-10">
                     <span className="text-gray-400 text-[0.8125rem] sm:text-[0.875rem] font-sans font-semibold tracking-wider">
                       03
@@ -390,7 +391,7 @@ export default function Home() {
                   <svg className="w-4.5 h-4.5 text-black transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path>
                   </svg>
-                </div>
+                </Link>
               </Reveal>
             </div>
 
@@ -398,7 +399,7 @@ export default function Home() {
             <div className="flex flex-col">
               {/* 04 RENOVATION */}
               <Reveal duration={0.8} delay={0.1} y={30}>
-                <div className="group flex items-center justify-between py-5 sm:py-6 border-t-0 md:border-t border-gray-200 cursor-pointer">
+                <Link href="/our-services" className="group flex items-center justify-between py-5 sm:py-6 border-t-0 md:border-t border-gray-200 cursor-pointer">
                   <div className="flex items-center gap-6 sm:gap-10">
                     <span className="text-gray-400 text-[0.8125rem] sm:text-[0.875rem] font-sans font-semibold tracking-wider">
                       04
@@ -410,12 +411,12 @@ export default function Home() {
                   <svg className="w-4.5 h-4.5 text-black transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path>
                   </svg>
-                </div>
+                </Link>
               </Reveal>
 
               {/* 05 HISTORIC PREVENTION */}
               <Reveal duration={0.8} delay={0.2} y={30}>
-                <div className="group flex items-center justify-between py-5 sm:py-6 border-t border-gray-200 cursor-pointer">
+                <Link href="/our-services" className="group flex items-center justify-between py-5 sm:py-6 border-t border-gray-200 cursor-pointer">
                   <div className="flex items-center gap-6 sm:gap-10">
                     <span className="text-gray-400 text-[0.8125rem] sm:text-[0.875rem] font-sans font-semibold tracking-wider">
                       05
@@ -427,12 +428,12 @@ export default function Home() {
                   <svg className="w-4.5 h-4.5 text-black transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path>
                   </svg>
-                </div>
+                </Link>
               </Reveal>
 
               {/* 06 VISUALIZATION */}
               <Reveal duration={0.8} delay={0.3} y={30}>
-                <div className="group flex items-center justify-between py-5 sm:py-6 border-t border-gray-200 border-b cursor-pointer">
+                <Link href="/our-services" className="group flex items-center justify-between py-5 sm:py-6 border-t border-gray-200 border-b cursor-pointer">
                   <div className="flex items-center gap-6 sm:gap-10">
                     <span className="text-gray-400 text-[0.8125rem] sm:text-[0.875rem] font-sans font-semibold tracking-wider">
                       06
@@ -444,7 +445,7 @@ export default function Home() {
                   <svg className="w-4.5 h-4.5 text-black transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path>
                   </svg>
-                </div>
+                </Link>
               </Reveal>
             </div>
           </div>
@@ -457,9 +458,9 @@ export default function Home() {
               className="font-display font-semibold text-[2.25rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[4rem] text-black leading-tight uppercase tracking-tight mb-8 max-w-4xl mx-auto"
             />
             <Reveal duration={0.8} delay={0.1} y={20}>
-              <button className="btn-hover-cropping bg-black text-white font-bold rounded-full py-4.5 px-9 text-[0.8125rem] tracking-wider uppercase border border-black cursor-pointer inline-flex items-center justify-center">
+              <Link href="/contact-us" className="btn-hover-cropping bg-black text-white font-bold rounded-full py-4.5 px-9 text-[0.8125rem] tracking-wider uppercase border border-black cursor-pointer inline-flex items-center justify-center">
                 <span className="relative z-10">GET ESTIMATED RATE</span>
-              </button>
+              </Link>
             </Reveal>
           </div>
         </div>
